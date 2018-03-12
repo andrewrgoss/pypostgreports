@@ -13,11 +13,11 @@
     <h4>{{schema['description']}}</h4>
   
     {% for table in schema['tables'] %}
-      <table class="min"><th>{{table['table']}}:</th><td>{{table['description']}}</table>
+      <table class="min"><th>Table name: {{table['table']}}</th></table>
       <table class="wide">
-        <tr><th>Attribute</th><th>Type</th><th>Nullable</th><th>Description</th></tr>
+        <tr><th>Field Name</th><th>Data Type</th><th>Sample Value</th></tr>
         {% for column in table['columns'] %}
-          <tr><td>{{column['column']}}</td><td>{{column['data_type']}}</td><td>{{column['is_nullable']}}</td><td>{{column['description']}}</td></tr>
+          <tr><td>{{column['column']}}</td><td>{{column['data_type']}}</td><td>{{column['sample_value']}}</td></tr>
         {% endfor %}
       </table>
       <br />
